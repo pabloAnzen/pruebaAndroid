@@ -29,15 +29,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void submitOrder(View view){
         price = (double) quantity * PRICE_PER_COFFE;
-        displayPrice(price);
+        displayMessage(price);
     }
 
     private void display(int number){
         quantityTextView.setText("" + number);
     }
 
-    private void displayPrice(double price){
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(price));
+    private void displayMessage(double price){
+        priceTextView.setText("Total " + NumberFormat.getCurrencyInstance().format(price) + "\nThank You!");
     }
 
     public void increment(View view){
